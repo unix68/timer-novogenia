@@ -4,7 +4,7 @@
 
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date().getTime() + 60 * 20 * 1000;
+var countDownDate = new Date().getTime() + 60 * 20 * 1000 - 40 * 1000;
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -29,10 +29,10 @@ var x = setInterval(function() {
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000).toString();
 
   // Display the result in the element with id="TxtRemainingTime"
-  if (seconds.length < 2) seconds = "0" + seconds;
+  if (seconds.length < 2) seconds = "0" + seconds
   document.getElementById("TxtRemainingTime").innerHTML = minutes + ":" + seconds;
 
   // If the count down is finished, write some text
@@ -45,6 +45,7 @@ var x = setInterval(function() {
 
 
 <div id="App" class="flex flex-col h-screen"><!----><!----><div class="relative w-full flex flex-col z-50"><!---->
+
 </div><!----><nav data-v-476c4777="" class="top-0 z-40 fixed-pinned  fixedunpinned bg-transparent"><div data-v-476c4777="" class="max-w-7xl mx-auto px-3 relative"><div data-v-476c4777="" class="flex items-center justify-between h-16"><a data-v-476c4777="" href="https://noeg.novo-testet.at/" class="items-center hidden sm:flex router-link-active"><img data-v-476c4777="" src="https://noeg.novo-testet.at/v/img/novogenia_logo.cb8bad78.png" alt="Novogenia" id="Navbar_Logo_Desktop" class="w-40 logo"></a><a data-v-476c4777="" href="https://noeg.novo-testet.at/" class="items-center flex sm:hidden router-link-active"><img data-v-476c4777="" src="https://noeg.novo-testet.at/v/img/novogenia_small.d034c09c.png" alt="Novogenia" id="Navbar_Logo_Mobile" class="w-10 logo"></a><div data-v-476c4777="" class="hidden md:flex items-center"><div data-v-476c4777="" id="Navbar_LangDropdown_Desktop" class="relative w-28 flex justify-between p-3 border border-gray-400 rounded-md cursor-pointer"><div data-v-476c4777="" class="flex items-center"><svg data-v-476c4777="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.749 48.748" stroke="currentColor" aria-hidden="true" class="block h-5 w-5 globe-icon"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M44.268,10.32c-0.371-0.524-0.758-1.035-1.17-1.527C38.624,3.424,31.891,0,24.374,0c-0.014,0-0.025,0.001-0.037,0.001
         C24.329,0.001,24.323,0,24.315,0c-0.027,0-0.055,0.003-0.084,0.003C16.771,0.046,10.097,3.46,5.649,8.793
         c-0.41,0.493-0.799,1.003-1.17,1.527C1.663,14.295,0,19.142,0,24.374c0,5.231,1.662,10.08,4.479,14.054
